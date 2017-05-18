@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>新手關卡</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<style>
+	
+		
+		div.box input:hover{
+			 position:relative; top:3px; right:10px; 
+		}
+	
+		body{
+			background-color:#8B4513;
+			background-image: url(jpeg/back2.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            font-family:DFKai-sb;
+		}
+		
+	    .box{
+           position:fixed;
+           top:1px;
+           left:88%;
+           width:180px;
+           height:730px;
+           background-image: url(jpeg/back2.jpg);
+           color:#7F7F7F;
+           padding:20px;
+           border:2px solid #ccc;
+           -moz-border-radius:20px;
+           -webkit-border-radius:20px;
+           -khtml-border-radius:20px;
+           -moz-box-shadow:0 1px 5px #333;
+           -webkit-box-shadow:0 1px 5px #333;
+           z-index:101;
+	    }
+	    
+	    .container{
+	    	position:fixed;
+	    	top:0px;
+	    	left:0%;
+	    	width:1350px;
+            height:680px;
+            padding:0px;
+	    }
+
+	    .button1{
+	    	position:fixed;
+	    	top:20px;
+	    	left:5%;
+	    	z-index:101;
+	    }
+	    
+        .box input {
+            margin:30px 0px ;
+            width:150px;
+            height:45px;
+            
+        }
+        
+        .boxs {
+			position: fixed;
+			top: -500px;
+			left: 30%;
+			width: 300px;
+			background-color: transparent url(jpeg/001.png) repeat top left;
+			padding: 20px;
+			-moz-border-radius: 20px;
+			-webkit-border-radius: 20px;
+			-khtml-border-radius: 20px;
+			-moz-box-shadow: 0 1px 5px #333;
+			-webkit-box-shadow: 0 1px 5px #333;
+			z-index: 101;
+			-webkit-transition: top 1s ease-out;
+			-ms-transition: top 1s ease-out;
+			transition: top 1s ease-out;
+		}
+		
+		.boxs {
+			transform: rotate(10deg);
+			-ms-transform: rotate(10deg);
+			-webkit-transform: rotate(10deg);
+		}	
+		
+		#boxs {
+			position: absolute;
+			background-color: transparent url(jpeg/001.png) repeat top left;
+			-webkit-animation: changeColor 5s;
+		}
+		
+		@-webkit-keyframes changeColor {
+			 0% { background-color:transparent url(jpeg/001.png) ; width: 300px; height: 410px; left: 10px; top: 10px;}
+			50% { background-color: transparent url(jpeg/001.png) ; width: 300px; height: 410px; left: 300px; top: 300px; }
+			100% { background-color: transparent url(jpeg/001.png) ; width: 300px; height: 410px; left: 10px; top: 10px; }
+		}
+	    
+	    .talkBoxs{
+	    	position:absolute;
+	    	width:900px;
+            height:100px;
+			bottom:0px;
+			left:350px;
+			font-weight:bold;
+			font-size:2em;
+	    }
+	    
+	    .talkBox1{
+	    	position:absolute;
+	    	top:-300px;
+	    	width:900px;
+            height:100px;
+			left:450px;
+			font-weight:bold;
+			font-size:2em;
+	    }
+	    
+	    .talkBox2{
+	    	position:absolute;
+	    	top:-300px;
+	    	width:500px;
+            height:100px;
+			left:850px;
+			font-weight:bold;
+			font-size:2em;
+	    }
+	    
+	    .talkBox3{
+	    	position:absolute;
+	    	top:-300px;
+	    	width:850px;
+            height:100px;
+			left:480px;
+			font-weight:bold;
+			font-size:2em;
+	    }
+	    
+	    .talkBox4{
+	    	position:absolute;
+	    	top:-300px;
+	    	width:650px;
+            height:100px;
+			left:450px;
+			font-weight:bold;
+			font-size:2em;
+	    }
+	    
+	    .talkBox5{
+	    	position:absolute;
+	    	top:-1000px;
+	    	width:70px;
+            height:450px;
+			left:50px;
+			font-weight:bold;
+			font-size:2em;
+			-webkit-writing-mode: vertical-rl
+	    }
+	    
+	    .box1 {
+			position: fixed;
+			top: -450px;
+			left: 35%;
+			width: 295px;
+			padding: 20px;
+			-moz-border-radius: 20px;
+			-webkit-border-radius: 20px;
+			-khtml-border-radius: 20px;
+			-moz-box-shadow: 0 1px 5px #333;
+			-webkit-box-shadow: 0 1px 5px #333;
+			z-index: 101;
+			-webkit-transition: top 0.5s ease-out;
+			-ms-transition: top 0.5s ease-out;
+			transition: top 0.5s ease-out;
+		}
+
+		.box1:hover{
+			background-color:mediumseagreen;
+		}
+		
+		.box2 {
+			position: fixed;
+			top: -500px;
+			left: 65%;
+			width: 300px;
+			padding: 20px;
+			-moz-border-radius: 20px;
+			-webkit-border-radius: 20px;
+			-khtml-border-radius: 20px;
+			-moz-box-shadow: 0 1px 5px #333;
+			-webkit-box-shadow: 0 1px 5px #333;
+			z-index: 101;
+			-webkit-transition: top 0.5s ease-out;
+			-ms-transition: top 0.5s ease-out;
+			transition: top 0.5s ease-out;
+		}
+		
+		.box2:hover{
+			background-color:blueviolet;
+		}
+		
+		.box3 {
+			position: fixed;
+			top: -500px;
+			left: 35%;
+			width: 300px;
+			padding: 20px;
+			-moz-border-radius: 20px;
+			-webkit-border-radius: 20px;
+			-khtml-border-radius: 20px;
+			-moz-box-shadow: 0 1px 5px #333;
+			-webkit-box-shadow: 0 1px 5px #333;
+			z-index: 101;
+			-webkit-transition: top 0.5s ease-out;
+			-ms-transition: top 0.5s ease-out;
+			transition: top 0.5s ease-out;
+		}
+		
+		.box3:hover{
+			background-color:crimson;
+		}
+		
+		.box4 {
+			position: fixed;
+			top: -500px;
+			left: 0%;
+			width: 300px;
+			padding: 20px;
+			-moz-border-radius: 20px;
+			-webkit-border-radius: 20px;
+			-khtml-border-radius: 20px;
+			-moz-box-shadow: 0 1px 5px #333;
+			-webkit-box-shadow: 0 1px 5px #333;
+			z-index: 101;
+			-webkit-transition: top 0.5s ease-out;
+			-ms-transition: top 0.5s ease-out;
+			transition: top 0.5s ease-out;
+		}
+		
+		.box4:hover{
+			background-color:deeppink;
+		}
+		
+		.box5 {
+			position: fixed;
+			top: -500px;
+			left: 10%;
+			width: 300px;
+			padding: 20px;
+			-moz-border-radius: 20px;
+			-webkit-border-radius: 20px;
+			-khtml-border-radius: 20px;
+			-moz-box-shadow: 0 1px 5px #333;
+			-webkit-box-shadow: 0 1px 5px #333;
+			z-index: 101;
+			-webkit-transition: top 0.5s ease-out;
+			-ms-transition: top 0.5s ease-out;
+			transition: top 0.5s ease-out;
+		}
+		
+		.box5:hover{
+			background-color:RoyalBlue;
+		}
+		
+		.box6{
+        position: fixed;
+      	top: -1000px;
+      	left: 50px;
+      	width: 350px;
+      	height: 500px;
+      	padding: 20px;
+      	z-index: 101;
+      	-webkit-transition: all 0.5s ease-out;
+      	-ms-transition: all 0.5s ease-out;
+      	transition: all 0.5s ease-out;
+      }
+      
+      	.box7{
+        position: fixed;
+      	top: -1000px;
+      	left: 50px;
+      	width: 350px;
+      	height: 500px;
+      	padding: 20px;
+      	z-index: 101;
+      	-webkit-transition: all 0.5s ease-out;
+      	-ms-transition: all 0.5s ease-out;
+      	transition: all 0.5s ease-out;
+      }
+      
+      	.box8{
+        position: fixed;
+      	top: -1000px;
+      	left: 50px;
+      	width: 350px;
+      	height: 500px;
+      	padding: 20px;
+      	z-index: 101;
+      	-webkit-transition: all 0.5s ease-out;
+      	-ms-transition: all 0.5s ease-out;
+      	transition: all 0.5s ease-out;
+      }
+		
+		.showBookfirst{
+        position: fixed;
+        background-image:url("back0001.png");
+      	top: -1000px;
+      	left: 50px;
+      	width: 750px;
+      	height: 680px;
+      	padding: 20px;
+      	border: 2px solid #ccc;
+      	-moz-border-radius: 20px;
+      	-webkit-border-radius: 20px;
+      	-khtml-border-radius: 20px;
+      	-moz-box-shadow: 0 1px 5px #333;
+      	-webkit-box-shadow: 0 1px 5px #333;
+      	z-index: 101;
+      	-webkit-transition: all 0.5s ease-out;
+      	-ms-transition: all 0.5s ease-out;
+      	transition: all 0.5s ease-out;
+      }
+		
+		.showBook{
+        position: fixed;
+        background-image:url("back0001.png");
+      	top: -1000px;
+      	left: 180px;
+      	width: 475px;
+      	height: 480px;
+      	background-color: #fff;
+      	color: #7F7F7F;
+      	padding: 20px;
+      	border: 2px solid #ccc;
+      	-moz-border-radius: 20px;
+      	-webkit-border-radius: 20px;
+      	-khtml-border-radius: 20px;
+      	-moz-box-shadow: 0 1px 5px #333;
+      	-webkit-box-shadow: 0 1px 5px #333;
+      	z-index: 101;
+      	-webkit-transition: all 0.5s ease-out;
+      	-ms-transition: all 0.5s ease-out;
+      	transition: all 0.5s ease-out;
+      }
+      	
+      	.talkBox6{
+	    	position:absolute;
+	    	top:-1500px;
+	    	width:850px;
+            height:100px;
+			left:30px;
+			font-weight:bold;
+			font-size:7em;
+			-webkit-writing-mode: vertical-lr
+	    }
+	    
+	    .talkBox7{
+	    	position:absolute;
+	    	top:-1500px;
+	    	width:850px;
+            height:100px;
+			left:30px;
+			font-weight:bold;
+			font-size:7em;
+			-webkit-writing-mode: vertical-lr
+	    }
+	    
+	    .talkBox8{
+	    	position:absolute;
+	    	top:-1500px;
+	    	width:850px;
+            height:100px;
+			left:30px;
+			font-weight:bold;
+			font-size:7em;
+			-webkit-writing-mode: vertical-lr
+	    }
+	    
+	    .talkBox9{
+	    	position:absolute;
+	    	top:-300px;
+	    	width:850px;
+            height:100px;
+			left:850px;
+			font-weight:bold;
+			font-size:2em;
+	    }
+	    
+	    .talkBox10{
+	    	position:absolute;
+	    	top:-300px;
+	    	width:850px;
+            height:100px;
+			left:850px;
+			font-weight:bold;
+			font-size:2em;
+	    }
+	    
+	    .talkBox11{
+	    	position:absolute;
+	    	top:-300px;
+	    	width:850px;
+            height:100px;
+			left:850px;
+			font-weight:bold;
+			font-size:2em;
+	    }
+	    
+      	
+	</style>
+
+</head>
+<body background = "jpeg/back1.jpg">
+	<div class = "container" >
+		<div id = "myCarousel" class = "carousel slide" data-interval =  "false">
+			<div class="carousel-inner">
+				<div class="item active">
+				<img src="jpeg/1.jpg" alt="First slide">
+				</div>
+				<div class="item">
+				<img src="jpeg/2.jpg" alt="Second slide">
+				</div>
+				<div class="item">
+				<img src="jpeg/3.jpg" alt="Third slide">
+				</div>
+				<div class="item">
+				<img src="jpeg/4.jpg" alt="fourth slide">
+				</div>
+				<div class="item">
+				<img src="jpeg/5.jpg" alt="fifth slide">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style=" text-align : center ; background : " id = "box" class = "box">
+	
+		<input type = "button" class = "btn slide-one"   style = "background-image:url(jpeg/back3-1-1.png);" onclick = "doAnimateShow();"><br>
+		<input type = "button" class = "btn slide-two"   style = "background-image:url(jpeg/back3-2-2.png);" onclick = "doAnimateShow2();"><br>
+		<input type = "button" class = "btn slide-three" style = "background-image:url(jpeg/back3-3-3.png);" onclick = "doAnimateShow3();"><br>
+		<input type = "button" class = "btn slide-four"  style = "background-image:url(jpeg/back3-4-4.png);" onclick = "doAnimateShow4();"><br>
+		<input type = "button" class = "btn slide-five"  style = "background-image:url(jpeg/back3-5-5.png);" onclick = "doAnimateShow5();"><br>
+	
+	</div>
+	<script>
+		$(function(){
+			
+			$(".slide-one").click(function(){
+				$("#myCarousel").carousel(0);
+			});
+			$(".slide-two").click(function(){
+				$("#myCarousel").carousel(1);
+			});
+			$(".slide-three").click(function(){
+				$("#myCarousel").carousel(2);
+			});
+			$(".slide-four").click(function(){
+				$("#myCarousel").carousel(3);
+			});
+			$(".slide-five").click(function(){
+				$("#myCarousel").carousel(4);
+			});
+			
+		});
+		
+	</script>
+
+	<div class="boxs" id="boxs">
+		<img src="jpeg/001.png">
+	</div>
+	
+	<div class="box1" id="box1">
+		<img src="jpeg/001-2.png">
+	</div>
+	
+	<div class="box2" id="box2">
+		<img src="jpeg/002.png" onclick="doAnimateShow6()">
+	</div>
+	
+	<div class="box3" id="box3">
+		<img src="jpeg/003.png">
+	</div>
+	
+	<div class="box4" id="box4">
+		<img src="jpeg/004.png">
+	</div>
+	
+	<div class="box5" id="box5">
+		<img src="jpeg/005.png">
+	</div>
+	
+	<div class="box6" id="box6">
+		<img src="bigbook0-1.png">
+	</div>
+	
+	<div class="box7" id="box7">
+		<img src="bigbook0-2.png">
+	</div>
+	
+	<div class="box8" id="box8">
+		<img src="bigbook0-3.png">
+	</div>
+	
+	<div class = "talkBoxs" id = "talkBoxs">
+		回去吧！以你目前的能力，我還不能讓你從這過去。
+	</div>
+	
+	<div class = "talkBox1" id = "talkBox1">
+		新人是吧！城裡找個適合你的師傅吧。
+	</div>
+	
+	<div class = "talkBox2" id = "talkBox2">
+		想學拳法嗎？你想學哪一種？<br>
+		藍色是猴拳、橘色是鶴拳、灰色是虎拳
+	</div>
+	
+	<div class = "talkBox3" id = "talkBox3">
+		我擅長箭術，我就住在您的隔壁，<br>
+		有空我們可以一起練習。
+	</div>
+	
+	<div class = "talkBox4" id = "talkBox4">
+		我每年都能從海上找到很多寶物。<br>
+		對了！搭船的費用是一億克蘭幣。你要搭嗎？
+	</div>
+	
+	<div class = "talkBox5" id = "talkBox5">
+		摧毀敵人攻擊力的招式，<br>要訣只有一個字。那就是「鎖」。
+	</div>
+	
+	<div class = "talkBox6" id = "talkBox6">
+		得到<br>鶴拳拳譜
+	</div>
+	
+	<div class = "talkBox7" id = "talkBox7">
+		得到<br>虎拳拳譜
+	</div>
+	
+	<div class = "talkBox8" id = "talkBox8">
+		得到<br>猴拳拳譜
+	</div>
+	
+	<div class = "talkBox9" id = "talkBox9">
+		你要學「鶴拳」是嗎？<br>五天後開課，記得交學費。
+	</div>
+	
+	<div class = "talkBox10" id = "talkBox10">
+		你要學「虎拳」是嗎？<br>下個月一號開課，記得交學費。
+	</div>
+	
+	<div class = "talkBox11" id = "talkBox11">
+		你要學「猴拳」是嗎？眼光真好。<br>明天報到找辰龍老師，記得交學費。
+	</div>
+	
+	<div class = "showBookfirst" id = "showBookfirst" name = "showBookfirst" >
+	
+	<script>
+	function doAnimateShow() {
+		document.getElementById("boxs").style.top = "-500px";
+		document.getElementById("talkBoxs").style.top = "-500px";
+		
+		document.getElementById("box2").style.top = "-500px";
+		document.getElementById("talkBox2").style.top = "-500px";
+		
+		document.getElementById("box3").style.top = "-500px";
+		document.getElementById("talkBox3").style.top = "-500px";
+		
+		document.getElementById("box4").style.top = "-500px";
+		document.getElementById("talkBox4").style.top = "-500px";
+		
+		document.getElementById("box5").style.top = "-500px";
+		document.getElementById("talkBox5").style.top = "-500px";
+		
+		document.getElementById("box6").style.top = "-1000px";
+		document.getElementById("talkBox6").style.top = "-500px";
+		
+		document.getElementById("box7").style.top = "-1000px";
+		document.getElementById("talkBox7").style.top = "-500px";
+		
+		document.getElementById("box8").style.top = "-1000px";
+		document.getElementById("talkBox8").style.top = "-500px";
+
+		document.getElementById("talkBox9").style.top = "-500px";
+
+		document.getElementById("talkBox10").style.top = "-500px";
+
+		document.getElementById("talkBox11").style.top = "-500px";
+
+		document.getElementById("box1").style.top = "200px";
+		document.getElementById("talkBox1").style.top = "100px";
+	}
+	
+	function doAnimateShow2() {
+		document.getElementById("boxs").style.top = "-500px";
+		document.getElementById("talkBoxs").style.top = "-500px";
+		
+		document.getElementById("box1").style.top = "-500px";
+		document.getElementById("talkBox1").style.top = "-500px";
+		
+		document.getElementById("box3").style.top = "-500px";
+		document.getElementById("talkBox3").style.top = "-500px";
+		
+		document.getElementById("box4").style.top = "-500px";
+		document.getElementById("talkBox4").style.top = "-500px";
+		
+		document.getElementById("box5").style.top = "-500px";
+		document.getElementById("talkBox5").style.top = "-500px";
+		
+		document.getElementById("box6").style.top = "-1000px";
+		document.getElementById("talkBox6").style.top = "-500px";
+		
+		document.getElementById("box7").style.top = "-1000px";
+		document.getElementById("talkBox7").style.top = "-500px";
+		
+		document.getElementById("box8").style.top = "-1000px";
+		document.getElementById("talkBox8").style.top = "-500px";
+
+		document.getElementById("talkBox9").style.top = "-500px";
+
+		document.getElementById("talkBox10").style.top = "-500px";
+
+		document.getElementById("talkBox11").style.top = "-500px";
+
+		
+		document.getElementById("box2").style.top = "200px";
+		document.getElementById("talkBox2").style.top = "100px";
+
+	}
+	
+	function doAnimateShow3() {
+		document.getElementById("boxs").style.top = "-500px";
+		document.getElementById("talkBoxs").style.top = "-500px";
+		
+		document.getElementById("box1").style.top = "-500px";
+		document.getElementById("talkBox1").style.top = "-500px";
+		
+		document.getElementById("box2").style.top = "-500px";
+		document.getElementById("talkBox2").style.top = "-500px";
+		
+		document.getElementById("box4").style.top = "-500px";
+		document.getElementById("talkBox4").style.top = "-500px";
+		
+		document.getElementById("box5").style.top = "-500px";
+		document.getElementById("talkBox5").style.top = "-500px";
+		
+		document.getElementById("box6").style.top = "-1000px";
+		document.getElementById("talkBox6").style.top = "-500px";
+		
+		document.getElementById("box7").style.top = "-1000px";
+		document.getElementById("talkBox7").style.top = "-500px";
+		
+		document.getElementById("box8").style.top = "-1000px";
+		document.getElementById("talkBox8").style.top = "-500px";
+
+		document.getElementById("talkBox9").style.top = "-500px";
+
+		document.getElementById("talkBox10").style.top = "-500px";
+
+		document.getElementById("talkBox11").style.top = "-500px";
+
+		
+		document.getElementById("box3").style.top = "100px";
+		document.getElementById("talkBox3").style.top = "10px";
+
+	}
+	
+	function doAnimateShow4() {
+		document.getElementById("boxs").style.top = "-500px";
+		document.getElementById("talkBoxs").style.top = "-500px";
+		
+		document.getElementById("box1").style.top = "-500px";
+		document.getElementById("talkBox1").style.top = "-500px";
+		
+		document.getElementById("box2").style.top = "-500px";
+		document.getElementById("talkBox2").style.top = "-500px";
+		
+		document.getElementById("box3").style.top = "-500px";
+		document.getElementById("talkBox3").style.top = "-500px";
+		
+		document.getElementById("box5").style.top = "-500px";
+		document.getElementById("talkBox5").style.top = "-500px";
+		
+		document.getElementById("box6").style.top = "-1000px";
+		document.getElementById("talkBox6").style.top = "-500px";
+		
+		document.getElementById("box7").style.top = "-1000px";
+		document.getElementById("talkBox7").style.top = "-500px";
+		
+		document.getElementById("box8").style.top = "-1000px";
+		document.getElementById("talkBox8").style.top = "-500px";
+
+		document.getElementById("talkBox9").style.top = "-500px";
+
+		document.getElementById("talkBox10").style.top = "-500px";
+
+		document.getElementById("talkBox11").style.top = "-500px";
+
+		
+		document.getElementById("box4").style.top = "100px";
+		document.getElementById("talkBox4").style.top = "300px";
+
+	}
+	
+	function doAnimateShow5() {
+		document.getElementById("boxs").style.top = "-500px";
+		document.getElementById("talkBoxs").style.top = "-500px";
+		
+		document.getElementById("box1").style.top = "-500px";
+		document.getElementById("talkBox1").style.top = "-500px";
+		
+		document.getElementById("box2").style.top = "-500px";
+		document.getElementById("talkBox2").style.top = "-500px";
+		
+		document.getElementById("box3").style.top = "-500px";
+		document.getElementById("talkBox3").style.top = "-500px";
+		
+		document.getElementById("box4").style.top = "-500px";
+		document.getElementById("talkBox4").style.top = "-500px";
+		
+		document.getElementById("box6").style.top = "-1000px";
+		document.getElementById("talkBox6").style.top = "-500px";
+		
+		document.getElementById("box7").style.top = "-1000px";
+		document.getElementById("talkBox7").style.top = "-500px";
+		
+		document.getElementById("box8").style.top = "-1000px";
+		document.getElementById("talkBox8").style.top = "-500px";
+
+		document.getElementById("talkBox9").style.top = "-500px";
+
+		document.getElementById("talkBox10").style.top = "-500px";
+
+		document.getElementById("talkBox11").style.top = "-500px";
+
+		
+		document.getElementById("box5").style.top = "20px";
+		document.getElementById("talkBox5").style.top = "150px";
+
+	}
+	
+	function doAnimateShow6(){
+		document.getElementById("showBookfirst").style.top = "10px";
+		document.getElementById("showBook").style.top = "145px";
+	}
+</script>
+		
+ 	<div>
+    <input type = "button" id = "start" name = "start" value = "選擇拳法" onclick = "Button13_onclick()">
+    <input type = "button" id = "start" name = "start" value = "確認選擇" onclick = "Button14_onclick()">
+    </div>
+    <input type = "button" id = "B_top1" name = "B_top1" value = "向上1" onclick = "Button1_onclick()" style="position:relative; left:240px; top: 30px; ">
+    <input type = "button" id = "B_top2" name = "B_top2" value = "向上2" onclick = "Button2_onclick()" style="position:relative; left:260px; top: 30px; ">
+    <input type = "button" id = "B_top3" name = "B_top3" value = "向上3" onclick = "Button3_onclick()" style="position:relative; left:280px; top: 30px; ">
+    <div>
+    <input type = "button" id = "B_bottom1" name = "B_bottom1" value = "向下1" onclick = "Button4_onclick()" style="position:relative; left:240px; top: 545px; ">
+    <input type = "button" id = "B_bottom2" name = "B_bottom2" value = "向下2" onclick = "Button5_onclick()" style="position:relative; left:260px; top: 545px; ">
+    <input type = "button" id = "B_bottom3" name = "B_bottom3" value = "向下3" onclick = "Button6_onclick()" style="position:relative; left:280px; top: 545px; ">
+    </div>
+    <div>
+    <input type = "button" id = "B_left1" name = "B_left1" value = "向左1" onclick = "Button7_onclick()" style="position:relative; left:0px; top: 160px; "><br>
+    <input type = "button" id = "B_left2" name = "B_left2" value = "向左2" onclick = "Button8_onclick()" style="position:relative; left:0px; top: 210px; "><br>
+    <input type = "button" id = "B_left3" name = "B_left3" value = "向左3" onclick = "Button9_onclick()" style="position:relative; left:0px; top: 260px; "><br>
+    </div>
+    <div>
+    <input type = "button" id = "B_right1" name = "B_right1" value = "向右1" onclick = "Button10_onclick()" style="position:relative; left:630px; top: 80px; "><br>
+    <input type = "button" id = "B_right2" name = "B_right2" value = "向右2" onclick = "Button11_onclick()" style="position:relative; left:630px; top: 130px; "><br>
+    <input type = "button" id = "B_right3" name = "B_right3" value = "向右3" onclick = "Button12_onclick()" style="position:relative; left:630px; top: 180px; "><br>
+    </div>
+
+    <script>
+		
+		var number_1 = new Array("back0001.png", "back0001.png", "back0001.png", "book2.png", "book3.png", "book3.png", "back0001.png", "back0001.png", "back0001.png");
+        var number_2 = new Array("back0001.png", "back0001.png", "back0001.png", "book2.png", "book2.png", "book3.png", "back0001.png", "back0001.png", "back0001.png");
+        var number_3 = new Array("back0001.png", "back0001.png", "back0001.png", "book2.png", "book2.png", "book1.png", "back0001.png", "back0001.png", "back0001.png");
+        var number_4 = new Array("book2.png", "book3.png", "book3.png", "book2.png", "book3.png", "book2.png", "book1.png", "book2.png", "book3.png");
+        var number_5 = new Array("book2.png", "book3.png", "book2.png", "book3.png", "book1.png", "book1.png", "book3.png", "book2.png", "book3.png");
+        var number_6 = new Array("book1.png", "book1.png", "book2.png", "book3.png", "book1.png", "book2.png", "book3.png", "book1.png", "book3.png");
+        var number_7 = new Array("back0001.png", "back0001.png", "back0001.png", "book1.png", "book2.png", "book1.png", "back0001.png", "back0001.png", "back0001.png");
+        var number_8 = new Array("back0001.png", "back0001.png", "back0001.png", "book1.png", "book3.png", "book1.png", "back0001.png", "back0001.png", "back0001.png");
+        var number_9 = new Array("back0001.png", "back0001.png", "back0001.png", "book1.png", "book1.png", "book1.png", "back0001.png", "back0001.png", "back0001.png");    
+    
+		function Button13_onclick(){
+		
+		document.getElementById("img1-0").src =number_1[0];
+		document.getElementById("img1-1").src =number_1[1];
+		document.getElementById("img1-2").src =number_1[2];
+		document.getElementById("img1-3").src =number_1[3];
+		document.getElementById("img1-4").src =number_1[4];
+		document.getElementById("img1-5").src =number_1[5];
+		document.getElementById("img1-6").src =number_1[6];
+		document.getElementById("img1-7").src =number_1[7];
+		document.getElementById("img1-8").src =number_1[8];
+		
+		document.getElementById("img2-0").src =number_2[0];
+		document.getElementById("img2-1").src =number_2[1];
+		document.getElementById("img2-2").src =number_2[2];
+		document.getElementById("img2-3").src =number_2[3];
+		document.getElementById("img2-4").src =number_2[4];
+		document.getElementById("img2-5").src =number_2[5];
+		document.getElementById("img2-6").src =number_2[6];
+		document.getElementById("img2-7").src =number_2[7];
+		document.getElementById("img2-8").src =number_2[8];
+		
+		document.getElementById("img3-0").src =number_3[0];
+		document.getElementById("img3-1").src =number_3[1];
+		document.getElementById("img3-2").src =number_3[2];
+		document.getElementById("img3-3").src =number_3[3];
+		document.getElementById("img3-4").src =number_3[4];
+		document.getElementById("img3-5").src =number_3[5];
+		document.getElementById("img3-6").src =number_3[6];
+		document.getElementById("img3-7").src =number_3[7];
+		document.getElementById("img3-8").src =number_3[8];
+		
+		document.getElementById("img4-0").src =number_4[0];
+		document.getElementById("img4-1").src =number_4[1];
+		document.getElementById("img4-2").src =number_4[2];
+		document.getElementById("img4-3").src =number_4[3];
+		document.getElementById("img4-4").src =number_4[4];
+		document.getElementById("img4-5").src =number_4[5];
+		document.getElementById("img4-6").src =number_4[6];
+		document.getElementById("img4-7").src =number_4[7];
+		document.getElementById("img4-8").src =number_4[8];
+		
+		document.getElementById("img5-0").src =number_5[0];
+		document.getElementById("img5-1").src =number_5[1];
+		document.getElementById("img5-2").src =number_5[2];
+		document.getElementById("img5-3").src =number_5[3];
+		document.getElementById("img5-4").src =number_5[4];
+		document.getElementById("img5-5").src =number_5[5];
+		document.getElementById("img5-6").src =number_5[6];
+		document.getElementById("img5-7").src =number_5[7];
+		document.getElementById("img5-8").src =number_5[8];
+		
+		document.getElementById("img6-0").src =number_6[0];
+		document.getElementById("img6-1").src =number_6[1];
+		document.getElementById("img6-2").src =number_6[2];
+		document.getElementById("img6-3").src =number_6[3];
+		document.getElementById("img6-4").src =number_6[4];
+		document.getElementById("img6-5").src =number_6[5];
+		document.getElementById("img6-6").src =number_6[6];
+		document.getElementById("img6-7").src =number_6[7];
+		document.getElementById("img6-8").src =number_6[8];
+		
+		document.getElementById("img7-0").src =number_7[0];
+		document.getElementById("img7-1").src =number_7[1];
+		document.getElementById("img7-2").src =number_7[2];
+		document.getElementById("img7-3").src =number_7[3];
+		document.getElementById("img7-4").src =number_7[4];
+		document.getElementById("img7-5").src =number_7[5];
+		document.getElementById("img7-6").src =number_7[6];
+		document.getElementById("img7-7").src =number_7[7];
+		document.getElementById("img7-8").src =number_7[8];
+		
+		document.getElementById("img8-0").src =number_8[0];
+		document.getElementById("img8-1").src =number_8[1];
+		document.getElementById("img8-2").src =number_8[2];
+		document.getElementById("img8-3").src =number_8[3];
+		document.getElementById("img8-4").src =number_8[4];
+		document.getElementById("img8-5").src =number_8[5];
+		document.getElementById("img8-6").src =number_8[6];
+		document.getElementById("img8-7").src =number_8[7];
+		document.getElementById("img8-8").src =number_8[8];
+		
+		document.getElementById("img9-0").src =number_9[0];
+		document.getElementById("img9-1").src =number_9[1];
+		document.getElementById("img9-2").src =number_9[2];
+		document.getElementById("img9-3").src =number_9[3];
+		document.getElementById("img9-4").src =number_9[4];
+		document.getElementById("img9-5").src =number_9[5];
+		document.getElementById("img9-6").src =number_9[6];
+		document.getElementById("img9-7").src =number_9[7];
+		document.getElementById("img9-8").src =number_9[8];
+		
+		}
+		
+		//向上1
+		function Button1_onclick(){
+		
+		var topNumber_1 = number_1.splice(3, 1);
+		var topNumber_2 = number_2.splice(3, 1);
+		var topNumber_3 = number_3.splice(3, 1);
+		var topNumber_4 = number_4.splice(3, 1);
+		var topNumber_5 = number_5.splice(3, 1);
+		var topNumber_6 = number_6.splice(3, 1);
+		var topNumber_7 = number_7.splice(3, 1);
+		var topNumber_8 = number_8.splice(3, 1);
+		var topNumber_9 = number_9.splice(3, 1);
+		 
+		number_1.splice(3, 0, topNumber_2);
+		number_2.splice(3, 0, topNumber_3);
+		number_3.splice(3, 0, topNumber_4);
+		number_4.splice(3, 0, topNumber_5);
+		number_5.splice(3, 0, topNumber_6);
+		number_6.splice(3, 0, topNumber_7);
+		number_7.splice(3, 0, topNumber_8);
+		number_8.splice(3, 0, topNumber_9);
+		number_9.splice(3, 0, topNumber_1);
+		
+		document.getElementById("img1-0").src =number_1[0];
+		document.getElementById("img1-1").src =number_1[1];
+		document.getElementById("img1-2").src =number_1[2];
+		document.getElementById("img1-3").src =number_1[3];
+		document.getElementById("img1-4").src =number_1[4];
+		document.getElementById("img1-5").src =number_1[5];
+		document.getElementById("img1-6").src =number_1[6];
+		document.getElementById("img1-7").src =number_1[7];
+		document.getElementById("img1-8").src =number_1[8];
+		
+		document.getElementById("img2-0").src =number_2[0];
+		document.getElementById("img2-1").src =number_2[1];
+		document.getElementById("img2-2").src =number_2[2];
+		document.getElementById("img2-3").src =number_2[3];
+		document.getElementById("img2-4").src =number_2[4];
+		document.getElementById("img2-5").src =number_2[5];
+		document.getElementById("img2-6").src =number_2[6];
+		document.getElementById("img2-7").src =number_2[7];
+		document.getElementById("img2-8").src =number_2[8];
+		
+		document.getElementById("img3-0").src =number_3[0];
+		document.getElementById("img3-1").src =number_3[1];
+		document.getElementById("img3-2").src =number_3[2];
+		document.getElementById("img3-3").src =number_3[3];
+		document.getElementById("img3-4").src =number_3[4];
+		document.getElementById("img3-5").src =number_3[5];
+		document.getElementById("img3-6").src =number_3[6];
+		document.getElementById("img3-7").src =number_3[7];
+		document.getElementById("img3-8").src =number_3[8];
+		
+		document.getElementById("img4-0").src =number_4[0];
+		document.getElementById("img4-1").src =number_4[1];
+		document.getElementById("img4-2").src =number_4[2];
+		document.getElementById("img4-3").src =number_4[3];
+		document.getElementById("img4-4").src =number_4[4];
+		document.getElementById("img4-5").src =number_4[5];
+		document.getElementById("img4-6").src =number_4[6];
+		document.getElementById("img4-7").src =number_4[7];
+		document.getElementById("img4-8").src =number_4[8];
+		
+		document.getElementById("img5-0").src =number_5[0];
+		document.getElementById("img5-1").src =number_5[1];
+		document.getElementById("img5-2").src =number_5[2];
+		document.getElementById("img5-3").src =number_5[3];
+		document.getElementById("img5-4").src =number_5[4];
+		document.getElementById("img5-5").src =number_5[5];
+		document.getElementById("img5-6").src =number_5[6];
+		document.getElementById("img5-7").src =number_5[7];
+		document.getElementById("img5-8").src =number_5[8];
+		
+		document.getElementById("img6-0").src =number_6[0];
+		document.getElementById("img6-1").src =number_6[1];
+		document.getElementById("img6-2").src =number_6[2];
+		document.getElementById("img6-3").src =number_6[3];
+		document.getElementById("img6-4").src =number_6[4];
+		document.getElementById("img6-5").src =number_6[5];
+		document.getElementById("img6-6").src =number_6[6];
+		document.getElementById("img6-7").src =number_6[7];
+		document.getElementById("img6-8").src =number_6[8];
+		
+		document.getElementById("img7-0").src =number_7[0];
+		document.getElementById("img7-1").src =number_7[1];
+		document.getElementById("img7-2").src =number_7[2];
+		document.getElementById("img7-3").src =number_7[3];
+		document.getElementById("img7-4").src =number_7[4];
+		document.getElementById("img7-5").src =number_7[5];
+		document.getElementById("img7-6").src =number_7[6];
+		document.getElementById("img7-7").src =number_7[7];
+		document.getElementById("img7-8").src =number_7[8];
+		
+		document.getElementById("img8-0").src =number_8[0];
+		document.getElementById("img8-1").src =number_8[1];
+		document.getElementById("img8-2").src =number_8[2];
+		document.getElementById("img8-3").src =number_8[3];
+		document.getElementById("img8-4").src =number_8[4];
+		document.getElementById("img8-5").src =number_8[5];
+		document.getElementById("img8-6").src =number_8[6];
+		document.getElementById("img8-7").src =number_8[7];
+		document.getElementById("img8-8").src =number_8[8];
+		
+		document.getElementById("img9-0").src =number_9[0];
+		document.getElementById("img9-1").src =number_9[1];
+		document.getElementById("img9-2").src =number_9[2];
+		document.getElementById("img9-3").src =number_9[3];
+		document.getElementById("img9-4").src =number_9[4];
+		document.getElementById("img9-5").src =number_9[5];
+		document.getElementById("img9-6").src =number_9[6];
+		document.getElementById("img9-7").src =number_9[7];
+		document.getElementById("img9-8").src =number_9[8];
+		}
+		//向上2
+		function Button2_onclick(){
+		
+		var topNumber_1 = number_1.splice(4, 1);
+		var topNumber_2 = number_2.splice(4, 1);
+		var topNumber_3 = number_3.splice(4, 1);
+		var topNumber_4 = number_4.splice(4, 1);
+		var topNumber_5 = number_5.splice(4, 1);
+		var topNumber_6 = number_6.splice(4, 1);
+		var topNumber_7 = number_7.splice(4, 1);
+		var topNumber_8 = number_8.splice(4, 1);
+		var topNumber_9 = number_9.splice(4, 1);
+		 
+		number_1.splice(4, 0, topNumber_2);
+		number_2.splice(4, 0, topNumber_3);
+		number_3.splice(4, 0, topNumber_4);
+		number_4.splice(4, 0, topNumber_5);
+		number_5.splice(4, 0, topNumber_6);
+		number_6.splice(4, 0, topNumber_7);
+		number_7.splice(4, 0, topNumber_8);
+		number_8.splice(4, 0, topNumber_9);
+		number_9.splice(4, 0, topNumber_1);
+		
+		document.getElementById("img1-0").src =number_1[0];
+		document.getElementById("img1-1").src =number_1[1];
+		document.getElementById("img1-2").src =number_1[2];
+		document.getElementById("img1-3").src =number_1[3];
+		document.getElementById("img1-4").src =number_1[4];
+		document.getElementById("img1-5").src =number_1[5];
+		document.getElementById("img1-6").src =number_1[6];
+		document.getElementById("img1-7").src =number_1[7];
+		document.getElementById("img1-8").src =number_1[8];
+		
+		document.getElementById("img2-0").src =number_2[0];
+		document.getElementById("img2-1").src =number_2[1];
+		document.getElementById("img2-2").src =number_2[2];
+		document.getElementById("img2-3").src =number_2[3];
+		document.getElementById("img2-4").src =number_2[4];
+		document.getElementById("img2-5").src =number_2[5];
+		document.getElementById("img2-6").src =number_2[6];
+		document.getElementById("img2-7").src =number_2[7];
+		document.getElementById("img2-8").src =number_2[8];
+		
+		document.getElementById("img3-0").src =number_3[0];
+		document.getElementById("img3-1").src =number_3[1];
+		document.getElementById("img3-2").src =number_3[2];
+		document.getElementById("img3-3").src =number_3[3];
+		document.getElementById("img3-4").src =number_3[4];
+		document.getElementById("img3-5").src =number_3[5];
+		document.getElementById("img3-6").src =number_3[6];
+		document.getElementById("img3-7").src =number_3[7];
+		document.getElementById("img3-8").src =number_3[8];
+		
+		document.getElementById("img4-0").src =number_4[0];
+		document.getElementById("img4-1").src =number_4[1];
+		document.getElementById("img4-2").src =number_4[2];
+		document.getElementById("img4-3").src =number_4[3];
+		document.getElementById("img4-4").src =number_4[4];
+		document.getElementById("img4-5").src =number_4[5];
+		document.getElementById("img4-6").src =number_4[6];
+		document.getElementById("img4-7").src =number_4[7];
+		document.getElementById("img4-8").src =number_4[8];
+		
+		document.getElementById("img5-0").src =number_5[0];
+		document.getElementById("img5-1").src =number_5[1];
+		document.getElementById("img5-2").src =number_5[2];
+		document.getElementById("img5-3").src =number_5[3];
+		document.getElementById("img5-4").src =number_5[4];
+		document.getElementById("img5-5").src =number_5[5];
+		document.getElementById("img5-6").src =number_5[6];
+		document.getElementById("img5-7").src =number_5[7];
+		document.getElementById("img5-8").src =number_5[8];
+		
+		document.getElementById("img6-0").src =number_6[0];
+		document.getElementById("img6-1").src =number_6[1];
+		document.getElementById("img6-2").src =number_6[2];
+		document.getElementById("img6-3").src =number_6[3];
+		document.getElementById("img6-4").src =number_6[4];
+		document.getElementById("img6-5").src =number_6[5];
+		document.getElementById("img6-6").src =number_6[6];
+		document.getElementById("img6-7").src =number_6[7];
+		document.getElementById("img6-8").src =number_6[8];
+		
+		document.getElementById("img7-0").src =number_7[0];
+		document.getElementById("img7-1").src =number_7[1];
+		document.getElementById("img7-2").src =number_7[2];
+		document.getElementById("img7-3").src =number_7[3];
+		document.getElementById("img7-4").src =number_7[4];
+		document.getElementById("img7-5").src =number_7[5];
+		document.getElementById("img7-6").src =number_7[6];
+		document.getElementById("img7-7").src =number_7[7];
+		document.getElementById("img7-8").src =number_7[8];
+		
+		document.getElementById("img8-0").src =number_8[0];
+		document.getElementById("img8-1").src =number_8[1];
+		document.getElementById("img8-2").src =number_8[2];
+		document.getElementById("img8-3").src =number_8[3];
+		document.getElementById("img8-4").src =number_8[4];
+		document.getElementById("img8-5").src =number_8[5];
+		document.getElementById("img8-6").src =number_8[6];
+		document.getElementById("img8-7").src =number_8[7];
+		document.getElementById("img8-8").src =number_8[8];
+		
+		document.getElementById("img9-0").src =number_9[0];
+		document.getElementById("img9-1").src =number_9[1];
+		document.getElementById("img9-2").src =number_9[2];
+		document.getElementById("img9-3").src =number_9[3];
+		document.getElementById("img9-4").src =number_9[4];
+		document.getElementById("img9-5").src =number_9[5];
+		document.getElementById("img9-6").src =number_9[6];
+		document.getElementById("img9-7").src =number_9[7];
+		document.getElementById("img9-8").src =number_9[8];
+		}
+		//向上3
+		function Button3_onclick(){
+		
+		var topNumber_1 = number_1.splice(5, 1);
+		var topNumber_2 = number_2.splice(5, 1);
+		var topNumber_3 = number_3.splice(5, 1);
+		var topNumber_4 = number_4.splice(5, 1);
+		var topNumber_5 = number_5.splice(5, 1);
+		var topNumber_6 = number_6.splice(5, 1);
+		var topNumber_7 = number_7.splice(5, 1);
+		var topNumber_8 = number_8.splice(5, 1);
+		var topNumber_9 = number_9.splice(5, 1);
+		 
+		number_1.splice(5, 0, topNumber_2);
+		number_2.splice(5, 0, topNumber_3);
+		number_3.splice(5, 0, topNumber_4);
+		number_4.splice(5, 0, topNumber_5);
+		number_5.splice(5, 0, topNumber_6);
+		number_6.splice(5, 0, topNumber_7);
+		number_7.splice(5, 0, topNumber_8);
+		number_8.splice(5, 0, topNumber_9);
+		number_9.splice(5, 0, topNumber_1);
+		
+		document.getElementById("img1-0").src =number_1[0];
+		document.getElementById("img1-1").src =number_1[1];
+		document.getElementById("img1-2").src =number_1[2];
+		document.getElementById("img1-3").src =number_1[3];
+		document.getElementById("img1-4").src =number_1[4];
+		document.getElementById("img1-5").src =number_1[5];
+		document.getElementById("img1-6").src =number_1[6];
+		document.getElementById("img1-7").src =number_1[7];
+		document.getElementById("img1-8").src =number_1[8];
+		
+		document.getElementById("img2-0").src =number_2[0];
+		document.getElementById("img2-1").src =number_2[1];
+		document.getElementById("img2-2").src =number_2[2];
+		document.getElementById("img2-3").src =number_2[3];
+		document.getElementById("img2-4").src =number_2[4];
+		document.getElementById("img2-5").src =number_2[5];
+		document.getElementById("img2-6").src =number_2[6];
+		document.getElementById("img2-7").src =number_2[7];
+		document.getElementById("img2-8").src =number_2[8];
+		
+		document.getElementById("img3-0").src =number_3[0];
+		document.getElementById("img3-1").src =number_3[1];
+		document.getElementById("img3-2").src =number_3[2];
+		document.getElementById("img3-3").src =number_3[3];
+		document.getElementById("img3-4").src =number_3[4];
+		document.getElementById("img3-5").src =number_3[5];
+		document.getElementById("img3-6").src =number_3[6];
+		document.getElementById("img3-7").src =number_3[7];
+		document.getElementById("img3-8").src =number_3[8];
+		
+		document.getElementById("img4-0").src =number_4[0];
+		document.getElementById("img4-1").src =number_4[1];
+		document.getElementById("img4-2").src =number_4[2];
+		document.getElementById("img4-3").src =number_4[3];
+		document.getElementById("img4-4").src =number_4[4];
+		document.getElementById("img4-5").src =number_4[5];
+		document.getElementById("img4-6").src =number_4[6];
+		document.getElementById("img4-7").src =number_4[7];
+		document.getElementById("img4-8").src =number_4[8];
+		
+		document.getElementById("img5-0").src =number_5[0];
+		document.getElementById("img5-1").src =number_5[1];
+		document.getElementById("img5-2").src =number_5[2];
+		document.getElementById("img5-3").src =number_5[3];
+		document.getElementById("img5-4").src =number_5[4];
+		document.getElementById("img5-5").src =number_5[5];
+		document.getElementById("img5-6").src =number_5[6];
+		document.getElementById("img5-7").src =number_5[7];
+		document.getElementById("img5-8").src =number_5[8];
+		
+		document.getElementById("img6-0").src =number_6[0];
+		document.getElementById("img6-1").src =number_6[1];
+		document.getElementById("img6-2").src =number_6[2];
+		document.getElementById("img6-3").src =number_6[3];
+		document.getElementById("img6-4").src =number_6[4];
+		document.getElementById("img6-5").src =number_6[5];
+		document.getElementById("img6-6").src =number_6[6];
+		document.getElementById("img6-7").src =number_6[7];
+		document.getElementById("img6-8").src =number_6[8];
+		
+		document.getElementById("img7-0").src =number_7[0];
+		document.getElementById("img7-1").src =number_7[1];
+		document.getElementById("img7-2").src =number_7[2];
+		document.getElementById("img7-3").src =number_7[3];
+		document.getElementById("img7-4").src =number_7[4];
+		document.getElementById("img7-5").src =number_7[5];
+		document.getElementById("img7-6").src =number_7[6];
+		document.getElementById("img7-7").src =number_7[7];
+		document.getElementById("img7-8").src =number_7[8];
+		
+		document.getElementById("img8-0").src =number_8[0];
+		document.getElementById("img8-1").src =number_8[1];
+		document.getElementById("img8-2").src =number_8[2];
+		document.getElementById("img8-3").src =number_8[3];
+		document.getElementById("img8-4").src =number_8[4];
+		document.getElementById("img8-5").src =number_8[5];
+		document.getElementById("img8-6").src =number_8[6];
+		document.getElementById("img8-7").src =number_8[7];
+		document.getElementById("img8-8").src =number_8[8];
+		
+		document.getElementById("img9-0").src =number_9[0];
+		document.getElementById("img9-1").src =number_9[1];
+		document.getElementById("img9-2").src =number_9[2];
+		document.getElementById("img9-3").src =number_9[3];
+		document.getElementById("img9-4").src =number_9[4];
+		document.getElementById("img9-5").src =number_9[5];
+		document.getElementById("img9-6").src =number_9[6];
+		document.getElementById("img9-7").src =number_9[7];
+		document.getElementById("img9-8").src =number_9[8];
+		}
+		
+		//向下1
+		function Button4_onclick(){
+		
+		var bottomNumber_1 = number_1.splice(3, 1);
+		var bottomNumber_2 = number_2.splice(3, 1);
+		var bottomNumber_3 = number_3.splice(3, 1);
+		var bottomNumber_4 = number_4.splice(3, 1);
+		var bottomNumber_5 = number_5.splice(3, 1);
+		var bottomNumber_6 = number_6.splice(3, 1);
+		var bottomNumber_7 = number_7.splice(3, 1);
+		var bottomNumber_8 = number_8.splice(3, 1);
+		var bottomNumber_9 = number_9.splice(3, 1);
+		 
+		number_1.splice(3, 0, bottomNumber_9);
+		number_2.splice(3, 0, bottomNumber_1);
+		number_3.splice(3, 0, bottomNumber_2);
+		number_4.splice(3, 0, bottomNumber_3);
+		number_5.splice(3, 0, bottomNumber_4);
+		number_6.splice(3, 0, bottomNumber_5);
+		number_7.splice(3, 0, bottomNumber_6);
+		number_8.splice(3, 0, bottomNumber_7);
+		number_9.splice(3, 0, bottomNumber_8);
+		
+		document.getElementById("img1-0").src =number_1[0];
+		document.getElementById("img1-1").src =number_1[1];
+		document.getElementById("img1-2").src =number_1[2];
+		document.getElementById("img1-3").src =number_1[3];
+		document.getElementById("img1-4").src =number_1[4];
+		document.getElementById("img1-5").src =number_1[5];
+		document.getElementById("img1-6").src =number_1[6];
+		document.getElementById("img1-7").src =number_1[7];
+		document.getElementById("img1-8").src =number_1[8];
+		
+		document.getElementById("img2-0").src =number_2[0];
+		document.getElementById("img2-1").src =number_2[1];
+		document.getElementById("img2-2").src =number_2[2];
+		document.getElementById("img2-3").src =number_2[3];
+		document.getElementById("img2-4").src =number_2[4];
+		document.getElementById("img2-5").src =number_2[5];
+		document.getElementById("img2-6").src =number_2[6];
+		document.getElementById("img2-7").src =number_2[7];
+		document.getElementById("img2-8").src =number_2[8];
+		
+		document.getElementById("img3-0").src =number_3[0];
+		document.getElementById("img3-1").src =number_3[1];
+		document.getElementById("img3-2").src =number_3[2];
+		document.getElementById("img3-3").src =number_3[3];
+		document.getElementById("img3-4").src =number_3[4];
+		document.getElementById("img3-5").src =number_3[5];
+		document.getElementById("img3-6").src =number_3[6];
+		document.getElementById("img3-7").src =number_3[7];
+		document.getElementById("img3-8").src =number_3[8];
+		
+		document.getElementById("img4-0").src =number_4[0];
+		document.getElementById("img4-1").src =number_4[1];
+		document.getElementById("img4-2").src =number_4[2];
+		document.getElementById("img4-3").src =number_4[3];
+		document.getElementById("img4-4").src =number_4[4];
+		document.getElementById("img4-5").src =number_4[5];
+		document.getElementById("img4-6").src =number_4[6];
+		document.getElementById("img4-7").src =number_4[7];
+		document.getElementById("img4-8").src =number_4[8];
+		
+		document.getElementById("img5-0").src =number_5[0];
+		document.getElementById("img5-1").src =number_5[1];
+		document.getElementById("img5-2").src =number_5[2];
+		document.getElementById("img5-3").src =number_5[3];
+		document.getElementById("img5-4").src =number_5[4];
+		document.getElementById("img5-5").src =number_5[5];
+		document.getElementById("img5-6").src =number_5[6];
+		document.getElementById("img5-7").src =number_5[7];
+		document.getElementById("img5-8").src =number_5[8];
+		
+		document.getElementById("img6-0").src =number_6[0];
+		document.getElementById("img6-1").src =number_6[1];
+		document.getElementById("img6-2").src =number_6[2];
+		document.getElementById("img6-3").src =number_6[3];
+		document.getElementById("img6-4").src =number_6[4];
+		document.getElementById("img6-5").src =number_6[5];
+		document.getElementById("img6-6").src =number_6[6];
+		document.getElementById("img6-7").src =number_6[7];
+		document.getElementById("img6-8").src =number_6[8];
+		
+		document.getElementById("img7-0").src =number_7[0];
+		document.getElementById("img7-1").src =number_7[1];
+		document.getElementById("img7-2").src =number_7[2];
+		document.getElementById("img7-3").src =number_7[3];
+		document.getElementById("img7-4").src =number_7[4];
+		document.getElementById("img7-5").src =number_7[5];
+		document.getElementById("img7-6").src =number_7[6];
+		document.getElementById("img7-7").src =number_7[7];
+		document.getElementById("img7-8").src =number_7[8];
+		
+		document.getElementById("img8-0").src =number_8[0];
+		document.getElementById("img8-1").src =number_8[1];
+		document.getElementById("img8-2").src =number_8[2];
+		document.getElementById("img8-3").src =number_8[3];
+		document.getElementById("img8-4").src =number_8[4];
+		document.getElementById("img8-5").src =number_8[5];
+		document.getElementById("img8-6").src =number_8[6];
+		document.getElementById("img8-7").src =number_8[7];
+		document.getElementById("img8-8").src =number_8[8];
+		
+		document.getElementById("img9-0").src =number_9[0];
+		document.getElementById("img9-1").src =number_9[1];
+		document.getElementById("img9-2").src =number_9[2];
+		document.getElementById("img9-3").src =number_9[3];
+		document.getElementById("img9-4").src =number_9[4];
+		document.getElementById("img9-5").src =number_9[5];
+		document.getElementById("img9-6").src =number_9[6];
+		document.getElementById("img9-7").src =number_9[7];
+		document.getElementById("img9-8").src =number_9[8];
+		}
+		//向下2
+		function Button5_onclick(){
+		
+		var bottomNumber_1 = number_1.splice(4, 1);
+		var bottomNumber_2 = number_2.splice(4, 1);
+		var bottomNumber_3 = number_3.splice(4, 1);
+		var bottomNumber_4 = number_4.splice(4, 1);
+		var bottomNumber_5 = number_5.splice(4, 1);
+		var bottomNumber_6 = number_6.splice(4, 1);
+		var bottomNumber_7 = number_7.splice(4, 1);
+		var bottomNumber_8 = number_8.splice(4, 1);
+		var bottomNumber_9 = number_9.splice(4, 1);
+		 
+		number_1.splice(4, 0, bottomNumber_9);
+		number_2.splice(4, 0, bottomNumber_1);
+		number_3.splice(4, 0, bottomNumber_2);
+		number_4.splice(4, 0, bottomNumber_3);
+		number_5.splice(4, 0, bottomNumber_4);
+		number_6.splice(4, 0, bottomNumber_5);
+		number_7.splice(4, 0, bottomNumber_6);
+		number_8.splice(4, 0, bottomNumber_7);
+		number_9.splice(4, 0, bottomNumber_8);
+		
+		document.getElementById("img1-0").src =number_1[0];
+		document.getElementById("img1-1").src =number_1[1];
+		document.getElementById("img1-2").src =number_1[2];
+		document.getElementById("img1-3").src =number_1[3];
+		document.getElementById("img1-4").src =number_1[4];
+		document.getElementById("img1-5").src =number_1[5];
+		document.getElementById("img1-6").src =number_1[6];
+		document.getElementById("img1-7").src =number_1[7];
+		document.getElementById("img1-8").src =number_1[8];
+		
+		document.getElementById("img2-0").src =number_2[0];
+		document.getElementById("img2-1").src =number_2[1];
+		document.getElementById("img2-2").src =number_2[2];
+		document.getElementById("img2-3").src =number_2[3];
+		document.getElementById("img2-4").src =number_2[4];
+		document.getElementById("img2-5").src =number_2[5];
+		document.getElementById("img2-6").src =number_2[6];
+		document.getElementById("img2-7").src =number_2[7];
+		document.getElementById("img2-8").src =number_2[8];
+		
+		document.getElementById("img3-0").src =number_3[0];
+		document.getElementById("img3-1").src =number_3[1];
+		document.getElementById("img3-2").src =number_3[2];
+		document.getElementById("img3-3").src =number_3[3];
+		document.getElementById("img3-4").src =number_3[4];
+		document.getElementById("img3-5").src =number_3[5];
+		document.getElementById("img3-6").src =number_3[6];
+		document.getElementById("img3-7").src =number_3[7];
+		document.getElementById("img3-8").src =number_3[8];
+		
+		document.getElementById("img4-0").src =number_4[0];
+		document.getElementById("img4-1").src =number_4[1];
+		document.getElementById("img4-2").src =number_4[2];
+		document.getElementById("img4-3").src =number_4[3];
+		document.getElementById("img4-4").src =number_4[4];
+		document.getElementById("img4-5").src =number_4[5];
+		document.getElementById("img4-6").src =number_4[6];
+		document.getElementById("img4-7").src =number_4[7];
+		document.getElementById("img4-8").src =number_4[8];
+		
+		document.getElementById("img5-0").src =number_5[0];
+		document.getElementById("img5-1").src =number_5[1];
+		document.getElementById("img5-2").src =number_5[2];
+		document.getElementById("img5-3").src =number_5[3];
+		document.getElementById("img5-4").src =number_5[4];
+		document.getElementById("img5-5").src =number_5[5];
+		document.getElementById("img5-6").src =number_5[6];
+		document.getElementById("img5-7").src =number_5[7];
+		document.getElementById("img5-8").src =number_5[8];
+		
+		document.getElementById("img6-0").src =number_6[0];
+		document.getElementById("img6-1").src =number_6[1];
+		document.getElementById("img6-2").src =number_6[2];
+		document.getElementById("img6-3").src =number_6[3];
+		document.getElementById("img6-4").src =number_6[4];
+		document.getElementById("img6-5").src =number_6[5];
+		document.getElementById("img6-6").src =number_6[6];
+		document.getElementById("img6-7").src =number_6[7];
+		document.getElementById("img6-8").src =number_6[8];
+		
+		document.getElementById("img7-0").src =number_7[0];
+		document.getElementById("img7-1").src =number_7[1];
+		document.getElementById("img7-2").src =number_7[2];
+		document.getElementById("img7-3").src =number_7[3];
+		document.getElementById("img7-4").src =number_7[4];
+		document.getElementById("img7-5").src =number_7[5];
+		document.getElementById("img7-6").src =number_7[6];
+		document.getElementById("img7-7").src =number_7[7];
+		document.getElementById("img7-8").src =number_7[8];
+		
+		document.getElementById("img8-0").src =number_8[0];
+		document.getElementById("img8-1").src =number_8[1];
+		document.getElementById("img8-2").src =number_8[2];
+		document.getElementById("img8-3").src =number_8[3];
+		document.getElementById("img8-4").src =number_8[4];
+		document.getElementById("img8-5").src =number_8[5];
+		document.getElementById("img8-6").src =number_8[6];
+		document.getElementById("img8-7").src =number_8[7];
+		document.getElementById("img8-8").src =number_8[8];
+		
+		document.getElementById("img9-0").src =number_9[0];
+		document.getElementById("img9-1").src =number_9[1];
+		document.getElementById("img9-2").src =number_9[2];
+		document.getElementById("img9-3").src =number_9[3];
+		document.getElementById("img9-4").src =number_9[4];
+		document.getElementById("img9-5").src =number_9[5];
+		document.getElementById("img9-6").src =number_9[6];
+		document.getElementById("img9-7").src =number_9[7];
+		document.getElementById("img9-8").src =number_9[8];
+		}
+		//向下3
+		function Button6_onclick(){
+		
+		var bottomNumber_1 = number_1.splice(5, 1);
+		var bottomNumber_2 = number_2.splice(5, 1);
+		var bottomNumber_3 = number_3.splice(5, 1);
+		var bottomNumber_4 = number_4.splice(5, 1);
+		var bottomNumber_5 = number_5.splice(5, 1);
+		var bottomNumber_6 = number_6.splice(5, 1);
+		var bottomNumber_7 = number_7.splice(5, 1);
+		var bottomNumber_8 = number_8.splice(5, 1);
+		var bottomNumber_9 = number_9.splice(5, 1);
+		 
+		number_1.splice(5, 0, bottomNumber_9);
+		number_2.splice(5, 0, bottomNumber_1);
+		number_3.splice(5, 0, bottomNumber_2);
+		number_4.splice(5, 0, bottomNumber_3);
+		number_5.splice(5, 0, bottomNumber_4);
+		number_6.splice(5, 0, bottomNumber_5);
+		number_7.splice(5, 0, bottomNumber_6);
+		number_8.splice(5, 0, bottomNumber_7);
+		number_9.splice(5, 0, bottomNumber_8);
+		
+		document.getElementById("img1-0").src =number_1[0];
+		document.getElementById("img1-1").src =number_1[1];
+		document.getElementById("img1-2").src =number_1[2];
+		document.getElementById("img1-3").src =number_1[3];
+		document.getElementById("img1-4").src =number_1[4];
+		document.getElementById("img1-5").src =number_1[5];
+		document.getElementById("img1-6").src =number_1[6];
+		document.getElementById("img1-7").src =number_1[7];
+		document.getElementById("img1-8").src =number_1[8];
+		
+		document.getElementById("img2-0").src =number_2[0];
+		document.getElementById("img2-1").src =number_2[1];
+		document.getElementById("img2-2").src =number_2[2];
+		document.getElementById("img2-3").src =number_2[3];
+		document.getElementById("img2-4").src =number_2[4];
+		document.getElementById("img2-5").src =number_2[5];
+		document.getElementById("img2-6").src =number_2[6];
+		document.getElementById("img2-7").src =number_2[7];
+		document.getElementById("img2-8").src =number_2[8];
+		
+		document.getElementById("img3-0").src =number_3[0];
+		document.getElementById("img3-1").src =number_3[1];
+		document.getElementById("img3-2").src =number_3[2];
+		document.getElementById("img3-3").src =number_3[3];
+		document.getElementById("img3-4").src =number_3[4];
+		document.getElementById("img3-5").src =number_3[5];
+		document.getElementById("img3-6").src =number_3[6];
+		document.getElementById("img3-7").src =number_3[7];
+		document.getElementById("img3-8").src =number_3[8];
+		
+		document.getElementById("img4-0").src =number_4[0];
+		document.getElementById("img4-1").src =number_4[1];
+		document.getElementById("img4-2").src =number_4[2];
+		document.getElementById("img4-3").src =number_4[3];
+		document.getElementById("img4-4").src =number_4[4];
+		document.getElementById("img4-5").src =number_4[5];
+		document.getElementById("img4-6").src =number_4[6];
+		document.getElementById("img4-7").src =number_4[7];
+		document.getElementById("img4-8").src =number_4[8];
+		
+		document.getElementById("img5-0").src =number_5[0];
+		document.getElementById("img5-1").src =number_5[1];
+		document.getElementById("img5-2").src =number_5[2];
+		document.getElementById("img5-3").src =number_5[3];
+		document.getElementById("img5-4").src =number_5[4];
+		document.getElementById("img5-5").src =number_5[5];
+		document.getElementById("img5-6").src =number_5[6];
+		document.getElementById("img5-7").src =number_5[7];
+		document.getElementById("img5-8").src =number_5[8];
+		
+		document.getElementById("img6-0").src =number_6[0];
+		document.getElementById("img6-1").src =number_6[1];
+		document.getElementById("img6-2").src =number_6[2];
+		document.getElementById("img6-3").src =number_6[3];
+		document.getElementById("img6-4").src =number_6[4];
+		document.getElementById("img6-5").src =number_6[5];
+		document.getElementById("img6-6").src =number_6[6];
+		document.getElementById("img6-7").src =number_6[7];
+		document.getElementById("img6-8").src =number_6[8];
+		
+		document.getElementById("img7-0").src =number_7[0];
+		document.getElementById("img7-1").src =number_7[1];
+		document.getElementById("img7-2").src =number_7[2];
+		document.getElementById("img7-3").src =number_7[3];
+		document.getElementById("img7-4").src =number_7[4];
+		document.getElementById("img7-5").src =number_7[5];
+		document.getElementById("img7-6").src =number_7[6];
+		document.getElementById("img7-7").src =number_7[7];
+		document.getElementById("img7-8").src =number_7[8];
+		
+		document.getElementById("img8-0").src =number_8[0];
+		document.getElementById("img8-1").src =number_8[1];
+		document.getElementById("img8-2").src =number_8[2];
+		document.getElementById("img8-3").src =number_8[3];
+		document.getElementById("img8-4").src =number_8[4];
+		document.getElementById("img8-5").src =number_8[5];
+		document.getElementById("img8-6").src =number_8[6];
+		document.getElementById("img8-7").src =number_8[7];
+		document.getElementById("img8-8").src =number_8[8];
+		
+		document.getElementById("img9-0").src =number_9[0];
+		document.getElementById("img9-1").src =number_9[1];
+		document.getElementById("img9-2").src =number_9[2];
+		document.getElementById("img9-3").src =number_9[3];
+		document.getElementById("img9-4").src =number_9[4];
+		document.getElementById("img9-5").src =number_9[5];
+		document.getElementById("img9-6").src =number_9[6];
+		document.getElementById("img9-7").src =number_9[7];
+		document.getElementById("img9-8").src =number_9[8];
+		}
+		
+		//向左1
+		function Button7_onclick(){
+		var firstNumber_1 = number_4.shift(1);
+		number_4.push(firstNumber_1)
+		
+		document.getElementById("img4-0").src =number_4[0];
+		document.getElementById("img4-1").src =number_4[1];
+		document.getElementById("img4-2").src =number_4[2];
+		document.getElementById("img4-3").src =number_4[3];
+		document.getElementById("img4-4").src =number_4[4];
+		document.getElementById("img4-5").src =number_4[5];
+		document.getElementById("img4-6").src =number_4[6];
+		document.getElementById("img4-7").src =number_4[7];
+		document.getElementById("img4-8").src =number_4[8];
+		}
+		//向左2
+		function Button8_onclick(){
+		var firstNumber_2 = number_5.shift(1);
+		number_5.push(firstNumber_2)
+		
+		document.getElementById("img5-0").src =number_5[0];
+		document.getElementById("img5-1").src =number_5[1];
+		document.getElementById("img5-2").src =number_5[2];
+		document.getElementById("img5-3").src =number_5[3];
+		document.getElementById("img5-4").src =number_5[4];
+		document.getElementById("img5-5").src =number_5[5];
+		document.getElementById("img5-6").src =number_5[6];
+		document.getElementById("img5-7").src =number_5[7];
+		document.getElementById("img5-8").src =number_5[8];
+		
+		}
+		//向左3
+		function Button9_onclick(){
+		var firstNumber_3 = number_6.shift(1);
+		number_6.push(firstNumber_3)
+		
+		document.getElementById("img6-0").src =number_6[0];
+		document.getElementById("img6-1").src =number_6[1];
+		document.getElementById("img6-2").src =number_6[2];
+		document.getElementById("img6-3").src =number_6[3];
+		document.getElementById("img6-4").src =number_6[4];
+		document.getElementById("img6-5").src =number_6[5];
+		document.getElementById("img6-6").src =number_6[6];
+		document.getElementById("img6-7").src =number_6[7];
+		document.getElementById("img6-8").src =number_6[8];
+		}
+		
+		//向右1
+		function Button10_onclick(){
+		var lastNumber_1 = number_4.pop(8);
+		number_4.unshift(lastNumber_1)
+		
+		document.getElementById("img4-0").src =number_4[0];
+		document.getElementById("img4-1").src =number_4[1];
+		document.getElementById("img4-2").src =number_4[2];
+		document.getElementById("img4-3").src =number_4[3];
+		document.getElementById("img4-4").src =number_4[4];
+		document.getElementById("img4-5").src =number_4[5];
+		document.getElementById("img4-6").src =number_4[6];
+		document.getElementById("img4-7").src =number_4[7];
+		document.getElementById("img4-8").src =number_4[8];
+		}
+		//向右2
+		function Button11_onclick(){
+		var lastNumber_2 = number_5.pop(8);
+		number_5.unshift(lastNumber_2)
+		
+		document.getElementById("img5-0").src =number_5[0];
+		document.getElementById("img5-1").src =number_5[1];
+		document.getElementById("img5-2").src =number_5[2];
+		document.getElementById("img5-3").src =number_5[3];
+		document.getElementById("img5-4").src =number_5[4];
+		document.getElementById("img5-5").src =number_5[5];
+		document.getElementById("img5-6").src =number_5[6];
+		document.getElementById("img5-7").src =number_5[7];
+		document.getElementById("img5-8").src =number_5[8];
+		}
+		//向右3
+		function Button12_onclick(){
+		  var lastNumber_3 = number_6.pop(8);
+		  number_6.unshift(lastNumber_3)
+		  
+		document.getElementById("img6-0").src =number_6[0];
+		document.getElementById("img6-1").src =number_6[1];
+		document.getElementById("img6-2").src =number_6[2];
+		document.getElementById("img6-3").src =number_6[3];
+		document.getElementById("img6-4").src =number_6[4];
+		document.getElementById("img6-5").src =number_6[5];
+		document.getElementById("img6-6").src =number_6[6];
+		document.getElementById("img6-7").src =number_6[7];
+		document.getElementById("img6-8").src =number_6[8];
+		} 
+		
+		function Button14_onclick(){
+			var win1 = number_4[3]
+			var win2 = number_4[4]
+			var win3 = number_4[5]
+			
+			var win4 = number_5[3]
+			var win5 = number_5[4]
+			var win6 = number_5[5]
+			
+			var win7 = number_6[3]
+			var win8 = number_6[4]
+			var win9 = number_6[5]
+			
+			if( win1 == "book1.png" && win2 == "book1.png" && win3 == "book1.png" && win4 == "book1.png" && win5 == "book1.png"
+			    && win6 == "book1.png" && win7 == "book1.png" && win8 == "book1.png" && win9 == "book1.png"){
+					
+					document.getElementById("showBookfirst").style.top = "-1000px";
+					document.getElementById("showBook").style.top = "-1000px";
+					document.getElementById("talkBox2").style.top = "-300px";
+					document.getElementById("talkBox6").style.top = "20px";
+					document.getElementById("talkBox9").style.top = "100px";
+					document.getElementById("box6").style.top = "150px";
+			
+			}
+			
+			if( win1 == "book2.png" && win2 == "book2.png" && win3 == "book2.png" && win4 == "book2.png" && win5 == "book2.png"
+			    && win6 == "book2.png" && win7 == "book2.png" && win8 == "book2.png" && win9 == "book2.png"){
+					
+					document.getElementById("showBookfirst").style.top = "-1000px";
+					document.getElementById("showBook").style.top = "-1000px";
+					document.getElementById("talkBox2").style.top = "-300px";
+					document.getElementById("talkBox7").style.top = "20px";
+					document.getElementById("talkBox10").style.top = "100px";
+					document.getElementById("box7").style.top = "150px";
+				
+			}
+			
+			if( win1 == "book3.png" && win2 == "book3.png" && win3 == "book3.png" && win4 == "book3.png" && win5 == "book3.png"
+			    && win6 == "book3.png" && win7 == "book3.png" && win8 == "book3.png" && win9 == "book3.png"){
+					
+					document.getElementById("showBookfirst").style.top = "-1000px";
+					document.getElementById("showBook").style.top = "-1000px";
+					document.getElementById("talkBox2").style.top = "-300px";
+					document.getElementById("talkBox8").style.top = "20px";
+					document.getElementById("talkBox11").style.top = "100px";
+					document.getElementById("box8").style.top = "150px";
+				
+			}
+		}
+
+    </script>
+
+    <div class = "showBook" id = "showBook" >
+    <img id = "img1-0"  src = "" width="30px" height = "20px">
+    <img id = "img1-1"  src = "" width="30px" height = "20px">
+    <img id = "img1-2"  src = "" width="30px" height = "20px">
+    <img id = "img1-3"  src = "" width="65px" height = "20px">
+    <img id = "img1-4"  src = "" width="65px" height = "20px">
+    <img id = "img1-5"  src = "" width="65px" height = "20px">
+    <img id = "img1-6"  src = "" width="30px" height = "20px">
+    <img id = "img1-7"  src = "" width="30px" height = "20px">
+    <img id = "img1-8"  src = "" width="30px" height = "20px">
+    <br>
+    <img id = "img2-0"  src = "" width="30px" height = "20px">
+    <img id = "img2-1"  src = "" width="30px" height = "20px">
+    <img id = "img2-2"  src = "" width="30px" height = "20px">
+    <img id = "img2-3"  src = "" width="65px" height = "20px">
+    <img id = "img2-4"  src = "" width="65px" height = "20px">
+    <img id = "img2-5"  src = "" width="65px" height = "20px">
+    <img id = "img2-6"  src = "" width="30px" height = "20px">
+    <img id = "img2-7"  src = "" width="30px" height = "20px">
+    <img id = "img2-8"  src = "" width="30px" height = "20px">
+    <br>
+    <img id = "img3-0"  src = "" width="30px" height = "20px">
+    <img id = "img3-1"  src = "" width="30px" height = "20px">
+    <img id = "img3-2"  src = "" width="30px" height = "20px">
+    <img id = "img3-3"  src = "" width="65px" height = "20px">
+    <img id = "img3-4"  src = "" width="65px" height = "20px">
+    <img id = "img3-5"  src = "" width="65px" height = "20px">
+    <img id = "img3-6"  src = "" width="30px" height = "20px">
+    <img id = "img3-7"  src = "" width="30px" height = "20px">
+    <img id = "img3-8"  src = "" width="30px" height = "20px">
+    <br>
+    <br>
+    <img id = "img4-0"  src = "" width="30px" height = "80px">
+    <img id = "img4-1"  src = "" width="30px" height = "80px">
+    <img id = "img4-2"  src = "" width="30px" height = "80px">
+    <img id = "img4-3"  src = "" width="65px">
+    <img id = "img4-4"  src = "" width="65px">
+    <img id = "img4-5"  src = "" width="65px">
+    <img id = "img4-6"  src = "" width="30px" height = "80px">
+    <img id = "img4-7"  src = "" width="30px" height = "80px">
+    <img id = "img4-8"  src = "" width="30px" height = "80px">
+    <br>
+    <img id = "img5-0"  src = "" width="30px" height = "80px">
+    <img id = "img5-1"  src = "" width="30px" height = "80px">
+    <img id = "img5-2"  src = "" width="30px" height = "80px">
+    <img id = "img5-3"  src = "" width="65px">
+    <img id = "img5-4"  src = "" width="65px">
+    <img id = "img5-5"  src = "" width="65px">
+    <img id = "img5-6"  src = "" width="30px" height = "80px">
+    <img id = "img5-7"  src = "" width="30px" height = "80px">
+    <img id = "img5-8"  src = "" width="30px" height = "80px">
+    <br>
+    <img id = "img6-0"  src = "" width="30px" height = "80px">
+    <img id = "img6-1"  src = "" width="30px" height = "80px">
+    <img id = "img6-2"  src = "" width="30px" height = "80px">
+    <img id = "img6-3"  src = "" width="65px">
+    <img id = "img6-4"  src = "" width="65px">
+    <img id = "img6-5"  src = "" width="65px">
+    <img id = "img6-6"  src = "" width="30px" height = "80px">
+    <img id = "img6-7"  src = "" width="30px" height = "80px">
+    <img id = "img6-8"  src = "" width="30px" height = "80px">
+    <br>
+    <br>
+    <img id = "img7-0"  src = "" width="30px" height = "20px">
+    <img id = "img7-1"  src = "" width="30px" height = "20px">
+    <img id = "img7-2"  src = "" width="30px" height = "20px">
+    <img id = "img7-3"  src = "" width="65px" height = "20px">
+    <img id = "img7-4"  src = "" width="65px" height = "20px">
+    <img id = "img7-5"  src = "" width="65px" height = "20px">
+    <img id = "img7-6"  src = "" width="30px" height = "20px">
+    <img id = "img7-7"  src = "" width="30px" height = "20px">
+    <img id = "img7-8"  src = "" width="30px" height = "20px">
+    <br>
+    <img id = "img8-0"  src = "" width="30px" height = "20px">
+    <img id = "img8-1"  src = "" width="30px" height = "20px">
+    <img id = "img8-2"  src = "" width="30px" height = "20px">
+    <img id = "img8-3"  src = "" width="65px" height = "20px">
+    <img id = "img8-4"  src = "" width="65px" height = "20px">
+    <img id = "img8-5"  src = "" width="65px" height = "20px">
+    <img id = "img8-6"  src = "" width="30px" height = "20px">
+    <img id = "img8-7"  src = "" width="30px" height = "20px">
+    <img id = "img8-8"  src = "" width="30px" height = "20px">
+    <br>
+    <img id = "img9-0"  src = "" width="30px" height = "20px">
+    <img id = "img9-1"  src = "" width="30px" height = "20px">
+    <img id = "img9-2"  src = "" width="30px" height = "20px">
+    <img id = "img9-3"  src = "" width="65px" height = "20px">
+    <img id = "img9-4"  src = "" width="65px" height = "20px">
+    <img id = "img9-5"  src = "" width="65px" height = "20px">
+    <img id = "img9-6"  src = "" width="30px" height = "20px">
+    <img id = "img9-7"  src = "" width="30px" height = "20px">
+    <img id = "img9-8"  src = "" width="30px" height = "20px">
+
+    </div>
+		
+	</div>
+
+</body>
+</html>
